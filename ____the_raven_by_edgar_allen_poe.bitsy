@@ -1,4 +1,7 @@
+"""
 The Raven
+By Edgar Allen Poe{pg}Adapted By Oliver Bush 
+"""
 
 # BITSY VERSION 8.14
 
@@ -29,7 +32,7 @@ ROOM 0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,d,d,a,0
 0,a,0,0,0,0,0,0,0,0,0,d,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,b,c,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
@@ -62,6 +65,7 @@ TIL b
 01111111
 01111111
 NAME BedLeft
+WAL true
 
 TIL c
 00000000
@@ -73,6 +77,7 @@ TIL c
 11111111
 11111111
 NAME BedRight
+WAL true
 
 TIL d
 00000010
@@ -94,6 +99,36 @@ TIL d
 00000010
 NAME Wall
 WAL true
+
+TIL e
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+TIL f
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+TIL g
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
 
 SPR A
 00011000
@@ -118,6 +153,41 @@ SPR a
 NAME cat
 DLG 0
 BLIP 1
+
+SPR b
+00000000
+00000000
+00000000
+01000000
+01111111
+01111111
+01111111
+01111111
+NAME Bedleft
+POS 0 12,8
+
+SPR c
+00000000
+00000011
+00000011
+00000011
+11111111
+11111111
+11111111
+11111111
+NAME BedRight
+DLG 4
+POS 0 13,8
+
+SPR d
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
 
 ITM 0
 00000000
@@ -155,6 +225,14 @@ NAME tea dialog
 DLG 2
 A key! {wvy}What does it open?{wvy}
 NAME key dialog
+
+DLG 4
+"""
+Once upon a midnight dreary, while I pondered, weak and weary,
+Over many a quaint and curious volume of forgotten lore—    While I nodded, nearly napping, suddenly there came a tapping,
+As of some one gently rapping, rapping at my chamber door.
+"""
+NAME BedRight dialog
 
 VAR a
 42
