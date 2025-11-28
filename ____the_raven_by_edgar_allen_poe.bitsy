@@ -45,6 +45,28 @@ EXT 2,7 0 2,11 FX slide_l DLG 6
 EXT 2,11 0 2,7
 PAL 1
 
+ROOM 1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,f,g,a,0
+0,e,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Bedchambers copy 1
+EXT 2,7 0 2,11 FX slide_l DLG 6
+EXT 2,11 0 2,7
+PAL 1
+
 TIL a
 11111111
 10000001
@@ -162,6 +184,30 @@ NAME BedCurtains
 DLG 7
 POS 0 12,7
 
+SPR g
+00000000
+00000000
+00000000
+01000000
+01111111
+01111111
+01111111
+01111111
+NAME BedLeftCopy1
+POS 1 12,8
+
+SPR h
+00000000
+00000011
+00000011
+00000011
+11111111
+11111111
+11111111
+11111111
+NAME BedRightCopy1
+POS 1 13,8
+
 ITM 2
 00000000
 00000000
@@ -204,8 +250,8 @@ DLG 7
 """
 {
   - a == 2 ?
-    And the silken, sad, uncertain rustling of each purple curtain
-    Thrilled me—filled me with fantastic terrors never felt before;
+    And the silken, sad, uncertain rustling of each purple curtain{pg}Thrilled me, filled me with fantastic terrors never felt before;{exit "1" 12 7}{pg}So that now, to still the beating of my heart, I stood repeating{pg}“’Tis some visitor entreating entrance at my chamber door
+    Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”
   - else ?
     ...
 }
