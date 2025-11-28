@@ -11,17 +11,17 @@ By Edgar Allen Poe{pg}Adapted By Oliver Bush {a = 0}
 ! DLG_COMPAT 0
 ! TXT_MODE 0
 
-PAL 0
-0,82,204
-128,159,255
-255,255,255
-NAME blueprint
-
 PAL 1
 47,0,62
-181,84,200
-250,248,255
+136,63,151
+226,102,255
 NAME BedChamber Pallet
+
+PAL 2
+0,0,0
+77,25,79
+226,102,255
+NAME Corridor 
 
 ROOM 0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -53,7 +53,7 @@ ROOM 1
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,f,g,a,0
-0,e,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
@@ -63,9 +63,28 @@ ROOM 1
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Bedchambers copy 1
-EXT 2,7 0 2,11 FX slide_l DLG 6
-EXT 2,11 0 2,7
 PAL 1
+TUNE 4
+
+ROOM 2
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,h,h,h
+0,0,0,0,0,0,0,0,0,0,0,0,0,h,0,h
+0,0,0,0,0,0,0,0,0,0,0,0,0,h,h,h
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Corridor
+PAL 2
 
 TIL a
 11111111
@@ -133,6 +152,18 @@ TIL g
 11111111
 11111111
 NAME BedTopRight
+WAL true
+
+TIL h
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Corridor Floor
 WAL true
 
 SPR A
@@ -208,6 +239,31 @@ SPR h
 NAME BedRightCopy1
 POS 1 13,8
 
+SPR i
+01111110
+01000010
+01000010
+01111110
+01000010
+01000010
+01000010
+01111110
+NAME DoorInteract
+DLG 8
+POS 1 1,7
+
+SPR j
+01111110
+01000010
+01000010
+01111110
+01000010
+01000010
+01000010
+01111110
+NAME DoorCorridor
+POS 2 15,7
+
 ITM 2
 00000000
 00000000
@@ -251,12 +307,26 @@ DLG 7
 {
   - a == 2 ?
     And the silken, sad, uncertain rustling of each purple curtain{pg}Thrilled me, filled me with fantastic terrors never felt before;{exit "1" 12 7}{pg}So that now, to still the beating of my heart, I stood repeating{pg}“’Tis some visitor entreating entrance at my chamber door
-    Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”
+    Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”{a = a + 1}
   - else ?
     ...
 }
 """
 NAME BedCurtains dialog
+
+DLG 8
+"""
+{
+  - a == 3 ?
+    Presently my soul grew stronger; hesitating then no longer,{pg}“Sir,” said I, “or Madam, truly your forgiveness I implore;
+    But the fact is I was napping, and so gently you came rapping,
+    {pg}And so faintly you came tapping, tapping at my chamber door,
+    That I scarce was sure I heard you”{pg}here I opened wide the door;{pg}{exit "2" 14 7 "fade_b"}Darkness there and nothing more.
+  - else ?
+    ...
+}
+"""
+NAME DoorInteract dialog
 
 VAR a
 42
