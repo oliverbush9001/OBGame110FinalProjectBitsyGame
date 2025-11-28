@@ -1,6 +1,6 @@
 """
 The Raven
-By Edgar Allen Poe{pg}Adapted By Oliver Bush {item "2" 0}
+By Edgar Allen Poe{pg}Adapted By Oliver Bush {a = 0}
 """
 
 # BITSY VERSION 8.14
@@ -30,8 +30,8 @@ ROOM 0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,d,d,a,0
-0,a,0,0,0,0,0,0,0,0,0,d,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,f,g,a,0
+0,e,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
@@ -41,6 +41,8 @@ ROOM 0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Bedchambers
+EXT 2,7 0 2,11 FX slide_l DLG 6
+EXT 2,11 0 2,7
 PAL 1
 
 TIL a
@@ -53,30 +55,6 @@ TIL a
 10000001
 11111111
 NAME block
-
-TIL b
-00000000
-00000000
-00000000
-01000000
-01111111
-01111111
-01111111
-01111111
-NAME BedLeft
-WAL true
-
-TIL c
-00000000
-00000011
-00000011
-00000011
-11111111
-11111111
-11111111
-11111111
-NAME BedRight
-WAL true
 
 TIL d
 00000010
@@ -100,34 +78,40 @@ NAME Wall
 WAL true
 
 TIL e
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
+01111110
+01000010
+01000010
+01111110
+01000010
+01000010
+01000010
+01111110
+NAME Door
+WAL true
 
 TIL f
 00000000
 00000000
 00000000
 00000000
-00000000
-00000000
-00000000
-00000000
+10000000
+11000000
+11111111
+11111111
+NAME Bed Top Left
+WAL true
 
 TIL g
 00000000
 00000000
 00000000
 00000000
-00000000
-00000000
-00000000
-00000000
+00000001
+00000011
+11111111
+11111111
+NAME BedTopRight
+WAL true
 
 SPR A
 00011000
@@ -165,6 +149,19 @@ NAME BedRight
 DLG 4
 POS 0 13,8
 
+SPR f
+11110000
+11110000
+11100000
+10000000
+10000000
+11000000
+11000000
+11000000
+NAME BedCurtains
+DLG 7
+POS 0 12,7
+
 ITM 2
 00000000
 00000000
@@ -180,15 +177,15 @@ DLG 5
 DLG 4
 """
 {
-  - {item "2"} == 0 ?
+  - a == 0 ?
     Once upon a midnight dreary, while I pondered, weak and weary,
     Over many a quaint and curious volume of forgotten lore{pg}While I nodded, nearly napping, suddenly there came a tapping,
-    As of some one gently rapping, rapping at my chamber door.{pg}{blip "3"}“’Tis some visitor,” I muttered, “tapping at my chamber door
-    Only this and nothing more.”{item "2" {{item "2"} + 1}}
-  - {item "2"} == 1 ?
+    As of some one gently rapping, rapping at my chamber door.{blip "3"}{tune "4"}{pg}“’Tis some visitor,” I muttered, “tapping at my chamber door
+    Only this and nothing more.”{a = a + 1}
+  - a == 1 ?
     Ah, distinctly I remember it was in the bleak December;
     And each separate dying ember wrought its ghost upon the floor.{pg}Eagerly I wished the morrow; vainly I had sought to borrow
-    From my books surcease of sorrow{pg}sorrow for the lost Lenore{pg}For the rare and radiant maiden whom the angels name Lenore{pg}Nameless {wvy}here{/wvy} for evermore.{item "2" {{item "2"} + 1}}
+    From my books surcease of sorrow{pg}sorrow for the lost Lenore{pg}For the rare and radiant maiden whom the angels name Lenore{pg}Nameless {wvy}here{/wvy} for evermore.{a = a + 1}
   - else ?
     ...
 }
@@ -198,6 +195,22 @@ NAME BedRight dialog 1
 DLG 5
 
 NAME Progression dialog
+
+DLG 6
+Presently my soul grew stronger; hesitating then no longer,
+NAME exit narration 1
+
+DLG 7
+"""
+{
+  - a == 2 ?
+    And the silken, sad, uncertain rustling of each purple curtain
+    Thrilled me—filled me with fantastic terrors never felt before;
+  - else ?
+    ...
+}
+"""
+NAME BedCurtains dialog
 
 VAR a
 42
@@ -278,10 +291,7 @@ SQR P4 P4
 
 TUNE 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
->
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2B2,0,0,0,2B2,0,0,0,2B2,0,0,0,0,0,0,0
 >
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -289,24 +299,8 @@ TUNE 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Tapping
-KEY C,D,D#,F,G,G#,A# d,r,m,s,l
-TMP FST
-SQR P2 P4
-ARP INT5
-
-BLIP 1
-E5,B5,B5
-NAME meow
-ENV 40 99 4 185 138
-BEAT 61 115
-SQR P2
-
-BLIP 2
-D5,E5,D5
-NAME pick up key
-ENV 99 65 6 96 152
-BEAT 95 0
-SQR P4
+TMP XFST
+SQR P4 P2
 
 BLIP 3
 B2,0,0
