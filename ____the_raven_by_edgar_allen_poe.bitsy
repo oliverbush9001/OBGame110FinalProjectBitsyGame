@@ -73,9 +73,9 @@ ROOM 2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,h,h,h
-0,0,0,0,0,0,0,0,0,0,0,0,0,h,0,h
-0,0,0,0,0,0,0,0,0,0,0,0,0,h,h,h
+0,0,0,0,0,0,0,0,0,0,0,0,h,h,h,h
+0,0,0,0,0,0,0,0,0,0,0,0,h,0,0,h
+0,0,0,0,0,0,0,0,0,0,0,0,h,h,h,h
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -84,6 +84,7 @@ ROOM 2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Corridor
+EXT 13,7 1 2,7 FX fade_b DLG 9
 PAL 2
 
 TIL a
@@ -158,8 +159,8 @@ TIL h
 00000000
 00000000
 00000000
-00000000
-00000000
+00011000
+00011000
 00000000
 00000000
 00000000
@@ -321,12 +322,20 @@ DLG 8
     Presently my soul grew stronger; hesitating then no longer,{pg}“Sir,” said I, “or Madam, truly your forgiveness I implore;
     But the fact is I was napping, and so gently you came rapping,
     {pg}And so faintly you came tapping, tapping at my chamber door,
-    That I scarce was sure I heard you”{pg}here I opened wide the door;{pg}{exit "2" 14 7 "fade_b"}Darkness there and nothing more.
+    That I scarce was sure I heard you”{pg}{tune "0"}here I opened wide the door;{pg}{exit "2" 14 7 "fade_b"}Darkness there and nothing more.
   - else ?
     ...
 }
 """
 NAME DoorInteract dialog
+
+DLG 9
+"""
+Deep into that darkness peering, long I stood there wondering, fearing,
+Doubting, dreaming dreams no mortal ever dared to dream before;{pg}But the silence was unbroken, and the stillness gave no token,
+And the only word there spoken was the whispered word,{pg}            {wvy}“Lenore?”{/wvy}{pg}This I whispered, and an echo murmured back the word,{pg}            {wvy}Lenore!{/wvy}{pg}Merely this and nothing more.
+"""
+NAME Corridor exit dialog 1
 
 VAR a
 42
