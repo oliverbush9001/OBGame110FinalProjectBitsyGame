@@ -12,7 +12,7 @@ By Edgar Allen Poe{pg}Adapted By Oliver Bush {a = 0}
 ! TXT_MODE 0
 
 PAL 1
-47,0,62
+0,3,62
 136,63,151
 226,102,255
 NAME BedChamber Pallet
@@ -100,10 +100,10 @@ ROOM 3
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,m,n,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,o,p,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,i,l,s,u,t,0,0,a,0
-0,a,j,j,j,j,j,j,j,q,0,r,j,j,a,0
+0,a,0,0,0,0,x,m,n,z,0,0,0,0,a,0
+0,a,0,0,0,0,y,o,p,10,0,0,0,0,a,0
+0,a,v,v,0,0,0,i,l,s,u,t,0,k,a,0
+0,a,0,0,j,j,j,j,j,q,0,r,j,j,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
@@ -112,6 +112,66 @@ ROOM 3
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME BedchamberV2
 PAL 3
+
+ROOM 4
+0,0,0,0,0,0,0,0,0,0,0,0,v,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,x,m,n,z,0,0,0,0,a,0
+0,a,0,0,0,0,y,o,p,10,0,0,0,0,a,0
+0,a,v,v,0,0,0,i,l,s,u,t,0,k,a,0
+0,a,0,0,j,j,j,j,j,q,0,r,j,j,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME BedchamberV2 copy 1
+PAL 3
+
+ROOM 5
+0,0,0,0,0,0,0,0,0,0,0,0,v,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,j,j,j,j,j,j,j,j,j,j,j,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,h,h,0,0,0,0,0,0,0,0,0,a,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME BedChamber Corridor 
+PAL 3
+
+TIL 10
+01110000
+01110000
+01110000
+01110000
+11100000
+11100000
+11100000
+11100000
+>
+11100000
+11100000
+11100000
+11100000
+01110000
+01110000
+01110000
+01110000
+NAME Purple Curtain Bottom Right
 
 TIL a
 11111111
@@ -223,19 +283,20 @@ TIL j
 00000000
 00000000
 11111111
-NAME floor line
+NAME floor lineFireplace RightFireplace RightDoorCorBottomDoorCorBottomDoorCorridorTopDoorCorridorTop
 WAL true
 
 TIL k
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-NAME Right wall
+01000000
+01000000
+11000000
+11000000
+11000000
+11000000
+11000000
+01000000
+NAME Right wall Bust 
+WAL true
 
 TIL l
 10000010
@@ -311,6 +372,7 @@ TIL q
 00001111
 11111111
 NAME FireplaceLeft
+WAL true
 
 TIL r
 11100000
@@ -321,6 +383,8 @@ TIL r
 11110000
 11110000
 11111111
+NAME Fireplace Right
+WAL true
 
 TIL s
 00000000
@@ -355,6 +419,111 @@ TIL u
 11111111
 NAME FireplaceTopMiddle
 
+TIL v
+00000000
+00000000
+00000000
+00011000
+00011000
+00000000
+00000000
+00000000
+NAME InvisWallBedchamber
+
+TIL w
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+TIL x
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+>
+00000111
+00000111
+00000111
+00000111
+00001110
+00001110
+00001110
+00001110
+NAME Purple Curtain Top Left
+
+TIL y
+00001110
+00001110
+00001110
+00001110
+00000111
+00000111
+00000111
+00000111
+>
+00000111
+00000111
+00000111
+00000111
+00001110
+00001110
+00001110
+00001110
+NAME Curtain bottom Left
+
+TIL z
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+>
+11100000
+11100000
+11100000
+11100000
+01110000
+01110000
+01110000
+01110000
+NAME Purple Curtain top Right
+
+SPR 10
+00000011
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+NAME DoorCorBottom
+POS 5 2,10
+
+SPR 11
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+00000011
+NAME DoorCorridorTop
+POS 5 2,9
+
 SPR A
 00011000
 00011000
@@ -366,17 +535,6 @@ SPR A
 00100100
 POS 3 2,9
 
-SPR b
-00000000
-00000000
-00000000
-01000000
-01111111
-01111111
-01111111
-01111111
-NAME Bedleft
-
 SPR c
 00000000
 00000011
@@ -387,21 +545,7 @@ SPR c
 11111111
 11111111
 NAME BedRight
-DLG 4
 POS 0 13,8
-
-SPR f
-11110000
-11110000
-11100000
-10000000
-10000000
-11000000
-11000000
-11000000
-NAME BedCurtains
-DLG 7
-POS 0 12,7
 
 SPR g
 00000000
@@ -414,18 +558,6 @@ SPR g
 01111111
 NAME BedLeftCopy1
 POS 1 12,8
-
-SPR h
-00000000
-00000011
-00000011
-00000011
-11111111
-11111111
-11111111
-11111111
-NAME BedRightCopy1
-POS 1 13,8
 
 SPR i
 01111110
@@ -521,7 +653,125 @@ SPR o
 NAME Fire Place
 POS 3 10,9
 
-ITM 2
+SPR p
+00000100
+00001100
+00011110
+00011110
+00001111
+00000011
+00000001
+00000000
+NAME Bust
+POS 3 12,8
+
+SPR q
+00000000
+00000100
+00001010
+00010001
+00100010
+01000100
+00101000
+00010000
+NAME Book
+DLG 4
+POS 3 3,9
+
+SPR r
+11000000
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+NAME V2 Door Bottom
+DLG 8
+POS 4 13,10
+
+SPR s
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+11000000
+NAME V2 Door Top
+POS 4 13,9
+
+SPR t
+11000000
+11100000
+11111111
+11111111
+11111111
+11111111
+11111111
+11100000
+NAME V2BedLeft
+
+SPR u
+00000001
+00000001
+11111111
+11111111
+11111111
+11111111
+11111111
+00000111
+NAME BedV3Right
+POS 4 3,10
+
+SPR v
+11000000
+11100000
+11111111
+11111111
+11111111
+11111111
+11111111
+11100000
+NAME BedV3Left
+POS 4 2,10
+
+SPR w
+00010000
+00001000
+00010010
+01011000
+00111100
+01111110
+01111110
+00111100
+>
+00001000
+00010000
+01001000
+00011010
+00111100
+01111110
+01111110
+00111100
+NAME V2 FirePlace
+POS 4 10,9
+
+SPR x
+00000100
+00001100
+00011110
+00011110
+00001111
+00000011
+00000001
+00000000
+NAME V2 Bust
+POS 4 12,8
+
+SPR y
 00000000
 00000000
 00000000
@@ -530,8 +780,34 @@ ITM 2
 00000000
 00000000
 00000000
-NAME Progression
-DLG 5
+NAME Corridor Dialogue Trigger
+DLG 9
+POS 5 4,10
+
+SPR z
+00000000
+00000000
+00000000
+00011000
+00011000
+00000000
+00000000
+00000000
+NAME V2Curtain Trigger
+DLG a
+POS 4 3,9
+
+ITM 3
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Book
+DLG 4
 
 DLG 4
 """
@@ -546,7 +822,7 @@ DLG 4
     And each separate dying ember wrought its ghost upon the floor.{pg}Eagerly I wished the morrow; vainly I had sought to borrow
     From my books surcease of sorrow{pg}sorrow for the lost Lenore{pg}For the rare and radiant maiden whom the angels name Lenore{pg}Nameless {wvy}here{/wvy} for evermore.{a = a + 1}
   - else ?
-    ...
+    {exit "4" 2 9}
 }
 """
 NAME BedRight dialog 1
@@ -559,18 +835,6 @@ DLG 6
 Presently my soul grew stronger; hesitating then no longer,
 NAME exit narration 1
 
-DLG 7
-"""
-{
-  - a == 2 ?
-    And the silken, sad, uncertain rustling of each purple curtain{pg}Thrilled me, filled me with fantastic terrors never felt before;{exit "1" 12 7}{pg}So that now, to still the beating of my heart, I stood repeating{pg}“’Tis some visitor entreating entrance at my chamber door
-    Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”{a = a + 1}
-  - else ?
-    ...
-}
-"""
-NAME BedCurtains dialog
-
 DLG 8
 """
 {
@@ -578,7 +842,7 @@ DLG 8
     Presently my soul grew stronger; hesitating then no longer,{pg}“Sir,” said I, “or Madam, truly your forgiveness I implore;
     But the fact is I was napping, and so gently you came rapping,
     {pg}And so faintly you came tapping, tapping at my chamber door,
-    That I scarce was sure I heard you”{pg}{tune "0"}here I opened wide the door;{pg}{exit "2" 14 7 "fade_b"}Darkness there and nothing more.
+    That I scarce was sure I heard you”{pg}{tune "0"}here I opened wide the door;{pg}{exit "5" 3 10 "fade_b"}Darkness there and nothing more.
   - else ?
     ...
 }
@@ -592,6 +856,14 @@ Doubting, dreaming dreams no mortal ever dared to dream before;{pg}But the silen
 And the only word there spoken was the whispered word,{pg}            {wvy}“Lenore?”{/wvy}{pg}This I whispered, and an echo murmured back the word,{pg}            {wvy}Lenore!{/wvy}{pg}Merely this and nothing more.
 """
 NAME Corridor exit dialog 1
+
+DLG a
+"""
+And the silken, sad, uncertain rustling of each purple curtain
+Thrilled me, filled me with fantastic terrors never felt before;{pg}So that now, to still the beating of my heart, I stood repeating{exit "4" 4 10}{pg}“Tis some visitor entreating entrance at my chamber door
+Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”
+"""
+NAME V2Curtain Trigger dialog
 
 VAR a
 42
