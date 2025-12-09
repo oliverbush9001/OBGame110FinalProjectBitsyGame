@@ -429,6 +429,7 @@ TIL v
 00000000
 00000000
 NAME InvisWallBedchamber
+WAL true
 
 TIL w
 00000000
@@ -853,7 +854,7 @@ DLG 9
 """
 Deep into that darkness peering, long I stood there wondering, fearing,
 Doubting, dreaming dreams no mortal ever dared to dream before;{pg}But the silence was unbroken, and the stillness gave no token,
-And the only word there spoken was the whispered word,{pg}            {wvy}“Lenore?”{/wvy}{pg}This I whispered, and an echo murmured back the word,{pg}            {wvy}Lenore!{/wvy}{pg}Merely this and nothing more.
+And the only word there spoken was the whispered word,{pg}            {wvy}“Lenore?”{/wvy}{pg}This I whispered, and an echo murmured back the word,{pg}            {wvy}Lenore!{/wvy}{pg}Merely this and nothing more.{exit "4" 12 10 "fade_b"}{a = 4}{end}
 """
 NAME Corridor exit dialog 1
 
@@ -861,7 +862,7 @@ DLG a
 """
 And the silken, sad, uncertain rustling of each purple curtain
 Thrilled me, filled me with fantastic terrors never felt before;{pg}So that now, to still the beating of my heart, I stood repeating{exit "4" 4 10}{pg}“Tis some visitor entreating entrance at my chamber door
-Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”
+Some late visitor entreating entrance at my chamber door;{pg}This it is and nothing more.”{a = 3}
 """
 NAME V2Curtain Trigger dialog
 
